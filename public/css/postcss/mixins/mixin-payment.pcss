@@ -1,0 +1,15 @@
+/**
+ * Миксин для базовой инциализации боковых меню на странице Платежи
+ */
+
+@define-mixin payment-init {
+	@mixin common-content;
+    @mixin common-arrow-open;
+    @mixin menu-heading-base;
+
+    display: flex;
+
+    &__menu {
+		@mixin menu-right;
+    }
+}

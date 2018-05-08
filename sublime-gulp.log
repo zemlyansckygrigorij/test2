@@ -1,0 +1,143 @@
+
+
+
+05-03-2018 11:57:
+fs.js:646
+  return binding.open(pathModule._makeLong(path), stringToFlags(flags), mode);
+                 ^
+
+Error: EACCES: permission denied, open '/Users/sapsan/Servers/Mario_1/usr/local/flexites/projects_ext/upb/upb_nodejs/.sublime-gulp.cache'
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.writeFileSync (fs.js:1291:33)
+    at Object.<anonymous> (/Users/sapsan/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:103:8)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Function.Module.runMain (module.js:684:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+
+
+05-03-2018 12:01:
+fs.js:646
+  return binding.open(pathModule._makeLong(path), stringToFlags(flags), mode);
+                 ^
+
+Error: EACCES: permission denied, open '/Users/sapsan/Servers/Mario_1/usr/local/flexites/projects_ext/upb/upb_nodejs/.sublime-gulp.cache'
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.writeFileSync (fs.js:1291:33)
+    at Object.<anonymous> (/Users/sapsan/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:103:8)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Function.Module.runMain (module.js:684:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+
+
+05-03-2018 12:02:
+fs.js:646
+  return binding.open(pathModule._makeLong(path), stringToFlags(flags), mode);
+                 ^
+
+Error: EACCES: permission denied, open '/Users/sapsan/Servers/Mario_1/usr/local/flexites/projects_ext/upb/upb_nodejs/.sublime-gulp.cache'
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.writeFileSync (fs.js:1291:33)
+    at Object.<anonymous> (/Users/sapsan/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:103:8)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Function.Module.runMain (module.js:684:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+
+
+05-03-2018 12:06:
+fs.js:646
+  return binding.open(pathModule._makeLong(path), stringToFlags(flags), mode);
+                 ^
+
+Error: EACCES: permission denied, open '/home/rodion/servers/mario.flexites.org/usr/local/flexites/projects_ext/upb/upb_nodejs/.sublime-gulp.cache'
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.writeFileSync (fs.js:1291:33)
+    at Object.<anonymous> (/home/rodion/.config/sublime-text-3/Packages/Gulp/write_tasks_to_cache.js:103:8)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Function.Module.runMain (module.js:684:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+
+
+05-03-2018 15:17:
+node[29691]: ../src/node_contextify.cc:631:static void node::contextify::ContextifyScript::New(const v8::FunctionCallbackInfo<v8::Value>&): Assertion `args[1]->IsString()' failed.
+ 1: node::Abort() [node]
+ 2: 0x87b6c5 [node]
+ 3: node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&) [node]
+ 4: v8::internal::FunctionCallbackArguments::Call(v8::internal::CallHandlerInfo*) [node]
+ 5: 0xad5b9f [node]
+ 6: v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*) [node]
+ 7: 0x24614920427d
+Aborted (core dumped)
+
+
+05-03-2018 15:18:
+node[29756]: ../src/node_contextify.cc:631:static void node::contextify::ContextifyScript::New(const v8::FunctionCallbackInfo<v8::Value>&): Assertion `args[1]->IsString()' failed.
+ 1: node::Abort() [node]
+ 2: 0x87b6c5 [node]
+ 3: node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&) [node]
+ 4: v8::internal::FunctionCallbackArguments::Call(v8::internal::CallHandlerInfo*) [node]
+ 5: 0xad5b9f [node]
+ 6: v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*) [node]
+ 7: 0x565df48427d
+Aborted (core dumped)
+
+
+05-03-2018 15:26:
+node[30342]: ../src/node_contextify.cc:631:static void node::contextify::ContextifyScript::New(const v8::FunctionCallbackInfo<v8::Value>&): Assertion `args[1]->IsString()' failed.
+ 1: node::Abort() [node]
+ 2: 0x87b6c5 [node]
+ 3: node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&) [node]
+ 4: v8::internal::FunctionCallbackArguments::Call(v8::internal::CallHandlerInfo*) [node]
+ 5: 0xad5b9f [node]
+ 6: v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*) [node]
+ 7: 0x17cf9f10427d
+Aborted (core dumped)
+
+
+05-03-2018 15:32:
+node[30569]: ../src/node_contextify.cc:631:static void node::contextify::ContextifyScript::New(const v8::FunctionCallbackInfo<v8::Value>&): Assertion `args[1]->IsString()' failed.
+ 1: node::Abort() [node]
+ 2: 0x87b6c5 [node]
+ 3: node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&) [node]
+ 4: v8::internal::FunctionCallbackArguments::Call(v8::internal::CallHandlerInfo*) [node]
+ 5: 0xad5b9f [node]
+ 6: v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*) [node]
+ 7: 0x30733f48427d
+Aborted (core dumped)
+
+
+05-03-2018 16:41:
+fs.js:646
+  return binding.open(pathModule._makeLong(path), stringToFlags(flags), mode);
+                 ^
+
+Error: EACCES: permission denied, open '/Users/sapsan/Servers/Mario_1/usr/local/flexites/projects_ext/upb/upb_nodejs/.sublime-gulp-tmp.js'
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.writeFileSync (fs.js:1291:33)
+    at requireGulp (/Users/sapsan/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:26:8)
+    at Object.<anonymous> (/Users/sapsan/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:83:12)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Function.Module.runMain (module.js:684:10)

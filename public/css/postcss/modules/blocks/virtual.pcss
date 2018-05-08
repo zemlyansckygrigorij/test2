@@ -1,0 +1,21 @@
+/**
+ * Блок для заказа виртуальной кнопки (боковое меню на странице карты)
+ */
+
+.virtual {
+	@mixin common-content;
+	@mixin menu-heading-base;
+
+    &__menu {
+		@mixin menu-right;
+    }
+
+	margin-top: $menu-top-content;
+	padding: $base-padding;
+
+    &__button {
+		@extend .form__button;
+		box-shadow: 0 2px rgba(0,0,0,.6);
+		background: $white;
+    }
+}

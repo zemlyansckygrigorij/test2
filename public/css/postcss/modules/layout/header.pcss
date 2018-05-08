@@ -1,0 +1,41 @@
+.header {
+	@define-mixin header-main {
+		padding: 5px 5%;
+	}
+
+	&__block {
+		@mixin display-flex row, nowrap, center, center;
+		height: 70px;
+		background: rgba(255,255,255,0.8);
+
+		&.m--home {
+			@mixin display-flex row, nowrap, space-between, center;
+			@mixin header-main;
+			height: $height-header;
+		}
+	}
+
+	&__image-hamburger,
+	&__image-person {
+		height: 100%;
+	    background-repeat: no-repeat;
+	    background-position-y: center;
+	}
+
+	&__image-hamburger {
+	    width: 17px;
+	}
+
+	&__image-person {
+	    width: 26px;
+	}
+
+	&__heading-block {
+		@mixin display-flex row, nowrap, flex-start, center;
+		height: 28px;
+	}
+
+	&__image {
+		max-height: 100%;
+	}
+}

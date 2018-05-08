@@ -1,0 +1,156 @@
+/**
+ * Боковое левое меню большинства страниц
+ */
+
+.main-menu {
+	@define-mixin segment {
+		position: absolute; 
+		left: 0;
+		width: 100%;
+	}
+
+	@mixin common-menu;
+	z-index: $z-index-level-3;
+	width: 90%;
+	left: -100%;
+	transition: $transition-base;
+	background: $white;
+	opacity: 0;
+
+	&.is-active {
+		left: 0%;
+		opacity: 1;
+	}
+
+	&__content,
+	&__button {
+		@mixin segment;
+	}
+
+	&__content {
+		top: 0;
+		height: calc(100% - 45px);
+		overflow: scroll;
+	}
+
+	&__block {
+		margin-top: 25px;
+		padding-left: 10px;
+		color: $gray;
+
+		&:first-child {
+			margin-top: 0px;
+		}
+	}
+
+	&__heading {
+		@mixin text-heading;
+	}
+
+	/*	Menu   */
+	&__content-link {
+		color: $gray;
+	}
+
+	&__menu-item {
+		display: flex;
+		padding-top: 15px;
+
+		&:before {
+			@mixin menu-before-icon-menu;
+		}
+
+		&.m--one {
+			&:before {
+				background-position: -240px 0px;
+			}
+		}
+
+		&.m--two {
+			&:before {
+				background-position: 0px 0px;
+			}
+		}
+
+		&.m--three {
+			&:before {
+				background-position: -30px 0px;
+			}
+		}
+
+		&.m--four {
+			&:before {
+				background-position: -60px 0px;
+			}
+		}
+
+		&.m--five {
+			&:before {
+				background-position: -150px 0px;
+			}
+		}
+	}
+
+	&__menu-text {
+		width: calc(100% - 30px);
+		padding-bottom: 15px;
+		border-bottom: $border-gray;
+	}
+
+		/*	Course   */
+	&__content-course {
+		padding: 0px 0px 20px 10px;
+	}
+
+	&__table {
+		width: 100%;
+
+		&-heading,
+		&-item {
+			border-bottom: $border-gray;
+		}
+	}
+	
+	&__cell {
+		padding: 10px 0px;
+
+		&-heading {
+			padding: 10px 0px 15px;
+			text-transform: uppercase;
+			text-align: left;
+
+			&:first-child {
+				background-image: url('/public/i/png/convertation-ico.png');
+				background-position: left center;
+				background-size: 38px 34px;
+				background-repeat: no-repeat;
+			}
+		}
+
+		&.m--active {
+			color: $green;
+		}
+	}
+
+	&__button {
+		@mixin display-flex row, nowrap, center, center;
+		bottom: 0;
+		height: 45px;
+		padding: 8px 0px;
+		border-top: $border-gray;
+
+		&-block {
+			width: 30px;
+			height: 30px;
+			margin-right: 20px;
+			overflow: hidden;
+			background-image: url('/public/i/png/menu-controls.png');
+			background-size: 150px 30px;
+			background-repeat: no-repeat;
+
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+	}
+}

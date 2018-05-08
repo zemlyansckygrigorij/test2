@@ -1,0 +1,71 @@
+/**
+ * Новостной слайдер на странице авторизации
+ */
+
+.news-slider {
+    $height-nav: 118px;
+	$slider-padding-left: 20px;
+
+	position: relative;
+	height: $height-nav;
+	background: $background-base;
+
+	&__content {
+		.slick-track,
+		.slick-slide div,
+		&__content-block {
+			height: 100%;
+		}
+
+		.slick-list,
+		.slick-dots {
+			border-top: 1px solid $green;
+		}
+
+		.slick-list {
+			height: 80px;
+		}
+
+		.slick-dots {
+			display: flex;
+			height: $slider-login-height;
+			padding: 15px $slider-padding-left;
+		}
+
+		li {
+			display: flex;
+			margin-right: 10px;
+		}
+
+		li,
+		button {
+		    width: 7px;
+		    height: 7px;
+		}
+
+		button {
+			content: url('/public/i/addImage/ellipse-base.png');
+		    padding: 0px;
+		    border: none;
+			border-radius: 50px;
+		}	
+
+		li.slick-active button {
+			content: url('/public/i/addImage/ellipse-active.png');
+		}		
+	}
+
+	&__content-block {
+		padding: 7px $slider-padding-left;
+	}
+
+	&__content-text {
+		@extend .text-block;
+		overflow: hidden;
+	}
+
+	&__switch {
+		height: 60px;
+		border-top: 1px solid $green;
+	}
+}

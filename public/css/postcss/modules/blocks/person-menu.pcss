@@ -1,0 +1,108 @@
+/**
+ * Боковое правое меню большинства страниц
+ */
+
+.person-menu {
+	@mixin common-menu;
+	z-index: $z-index-level-3;
+	width: 90%;
+	right: -100%;
+	transition: $transition-base;
+	background: $white;
+	opacity: 0;
+
+	&.is-active {
+		right: 0%;
+		opacity: 1;
+	}
+
+	&__person {
+		@mixin display-flex row, nowrap, flex-start, center;
+		padding: 20px;
+		border-bottom: $border-gray;
+
+		&-image {
+			width: 60px;
+			height: 60px;
+			border: $border-green;
+			border-radius: 100px;
+			background-repeat: no-repeat;
+			background-size: 60px 60px;
+			background-position: center center;
+		}
+
+		&-name {
+			max-width: 200px;
+			padding-left: 20px;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+	}
+
+	&__information {
+		padding-left: 20px;
+		border-bottom: $border-gray;
+
+		&-item {
+			@mixin display-flex column, nowrap;
+			padding: 10px 0px;
+			border-bottom: $border-gray;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		&-text {
+			@mixin text-item-light;
+			line-height: 18px;
+
+			&.m--bold {
+				@mixin text-item-bold;
+			}
+		}
+
+		&-link {
+			text-decoration: underline;
+			color: $green;
+		}
+	}
+
+	&__document {
+		margin-top: 20px;
+		padding-left: 10px;
+
+		&-heading {
+			@mixin text-heading;
+		}
+
+		&-item {
+			display: flex;
+			padding: 15px 0px 0px 10px;
+
+			&:before {
+				@mixin menu-before-icon-menu;
+			}
+
+			&.m--one {
+				&:before {
+					background-position: -180px 0px;
+				}
+			}
+
+			&.m--two {
+				&:before {
+					background-position: -210px 0px;
+				}
+			}
+		}
+
+		&-link {
+			width: calc(100% - 30px);
+			padding-bottom: 15px;
+			border-bottom: $border-gray;
+			text-overflow:ellipsis;
+			color: $gray;
+		}
+	}
+}

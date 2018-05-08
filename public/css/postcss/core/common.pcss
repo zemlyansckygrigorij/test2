@@ -1,0 +1,45 @@
+body {
+	position: relative;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	color: $font-color-base;
+	background: $white;
+	overflow-x: hidden;
+}
+
+.wrap {
+	&__content {
+		@mixin common-background;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+
+.block {
+	position: relative;
+	width: 100%;
+	background: transparent;
+}
+
+.shadow {
+	z-index: $z-index-level-2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+}
+
+.authStatus {
+	display: none;
+}
+
+.page {
+	padding-bottom: $menu-top-content;
+	overflow-y: scroll;
+}

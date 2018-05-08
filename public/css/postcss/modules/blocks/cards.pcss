@@ -1,0 +1,58 @@
+/**
+ * Раздел/блок карты
+ */
+
+.cards {
+	@mixin cards;
+	@mixin cards-heading;
+	@mixin cards-menu;
+	@mixin common-content;
+
+		/* Боковое меню */
+	&__menu {
+		@mixin menu-right;
+	}
+
+	&__content-inside {
+		height: calc(100% - 50px);
+		padding-bottom: $menu-top-content;
+		overflow-y: scroll;
+	}
+
+    &__block-balance,
+    &__block-date {
+        @mixin cards-block;
+    }
+
+	&__heading {
+		@mixin common-heading;
+	}
+
+	&__pay {
+		&-block {
+        	@mixin display-flex column, nowrap;
+        	margin-top: $menu-top-content;
+		}
+
+		&-date {
+			@mixin common-heading;
+		}
+
+		&-information {
+			@mixin cards-block;
+        	@mixin display-flex column, nowrap;
+		}
+
+		&-name {
+			@mixin text-item-bold;
+		}
+
+		&-device {
+			@mixin text-item-light;
+		}
+
+		&-value {
+			@mixin display-flex row, nowrap, flex-end;
+		}
+	}
+}

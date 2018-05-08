@@ -1,0 +1,8 @@
+<div id="app" class="wrap__content">
+	<div id="authStatus" class="authStatus">true</div>
+	<transition name="router-anim" enter-active-class="animated fadeInLeft" leave-active-class="animated fadeOutLeft">
+		<router-view></router-view>
+	</transition>
+
+	<v-dialog :width="280" :adaptive="true"/>
+</div>

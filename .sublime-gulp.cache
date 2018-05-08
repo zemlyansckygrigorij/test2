@@ -1,0 +1,1 @@
+{"/home/rodion/test2/gulpfile.js": {"tasks": {"watch-css": {"name": "watch-css", "dependencies": ""}, "postcss-build": {"name": "postcss-build", "dependencies": ""}, "js-build": {"name": "js-build", "dependencies": ""}}, "sha1": "5523024cceef8a3d09c820bea00f0a758e77bf83"}}

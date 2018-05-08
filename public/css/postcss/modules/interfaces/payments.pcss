@@ -1,0 +1,36 @@
+/**
+ * Страница Платежи
+ */
+
+.payments {
+	@mixin common-content;
+	
+	&__heading {
+		@mixin common-heading;
+	}
+
+	&__block-list {
+		border-bottom: $border-green;
+	}
+
+	&__item {
+		@mixin display-flex row, nowrap, space-between;
+		padding: $base-padding;
+		background: $background-base;
+		border-bottom: $border-green;
+	}
+
+	&__name {
+		@mixin display-flex row, nowrap, flex-start, center;
+		height: 20px;
+		margin-left: 20px;
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+		color: $gray;
+	}
+
+	&__text {
+		margin-left: 50px;
+	}
+
+}

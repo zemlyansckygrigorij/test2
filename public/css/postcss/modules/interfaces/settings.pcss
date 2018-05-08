@@ -1,0 +1,82 @@
+/**
+ * Страница настроек
+ */
+
+.settings {
+	$padding-base: 0px 20px;
+
+	@mixin common-content;
+
+	&__block {
+		margin-top: $menu-top-content;
+		background: $background-base;
+		overflow-y: scroll;
+
+		&:first-child {
+			margin-top: 0px;
+		}
+	}
+
+	&__block,
+	&__background-choose,
+	&__content-block,
+	&__text {
+		border-bottom: $border-green;
+	}
+
+	&__background-choose,
+	&__text,
+	&__learning-block {
+		padding: $padding-base;
+	}
+
+	&__text {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		color: $black;
+	}
+
+	&__heading {
+		@mixin common-heading;
+	}
+
+	&__learning-block {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	&__button-learning {
+		@extend .form__button;
+		box-shadow: 0 2px rgba(0,0,0,.6);
+		background: $white;
+	}
+
+	&__background-choose {
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	&__button-choose {
+		@mixin reset-button;
+		position: relative;
+		width: 100%;
+		text-align: left;
+		padding: 20px 0px;
+		color: $gray;
+	}
+
+	&__button-choose.is-active {
+		&:before {
+			content: '';
+		    position: absolute;
+		    top: 10px;
+		    right: 0;
+		    width: 30px;
+		    height: 30px;
+		    background-image: url(/public/i/addImage/checkmark.png);
+		    background-size: 30px 30px;
+		    background-repeat: no-repeat;
+		}
+	}
+}

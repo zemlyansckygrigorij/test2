@@ -1,0 +1,138 @@
+        mounted () {
+                // 2. Возвращается this.active
+            console.log("Nav");
+            console.log(this.string);
+            this.active = false;
+            this.$store.dispatch('news').then(response => {
+                this.news = this.$store.getters.news;                
+            });
+        },
+        methods: {
+            click () {
+                    // 6. При нажатии на кнопку меняется значение this.active
+                    // 7. Срабатывает watch
+                    // 8. Вызывается activeAsync
+                    // 9. Срабатывает active в asyncComputed, возвращающий новое значение
+                (this.active) ? (this.active = false) : (this.active = true);
+            },
+            activeAsync() {
+                    // 4. Возвращается новое значение
+                return this.active;
+            }
+        },
+        asyncComputed: {
+            news () {
+                return this.$store.getters.news;
+            },
+            active () {
+                    // 1. Возвращается undefined, т.к. на текущий момент не существует статуса active
+                return this.active;
+            }
+        },
+        watch: {
+            active: function(newActive) {
+                    // 3. Вызывается метод обновления значения
+                this.activeAsync();
+                    // 5. Статус обновлён
+            }
+        }
+
+            //<router-link to="login">Переход к LogIn</router-link>
+
+Кэширование: <keep-alive></keep-alive>
+
+<div class="nav-news__block-text" v-html="item.content"></div>
+
+<div class="nav-news__block-text m--under" v-html="item.content"></div>
+
+                        this.$store.commit('setHeaderMain', { type: 'IP'                , items: AuthorizationInfo.IP });
+                        this.$store.commit('setHeaderMain', { type: 'TimeLastEnter'     , items: Avatar.TimeLastEnter });
+                        this.$store.commit('setHeaderMain', { type: 'Data'              , items: Avatar.Data });
+                        this.$store.commit('setHeaderMain', { type: 'MIME'              , items: Avatar.MIME });
+                        this.$store.commit('setHeaderMain', { type: 'BonusColor'        , items: BonusInfo.BonusColor });
+                        this.$store.commit('setHeaderMain', { type: 'ballBonus'         , items: BonusInfo.ballBonus });
+                        this.$store.commit('setHeaderMain', { type: 'Name'              , items: PersonalInfo.Name });
+                        this.$store.commit('setHeaderMain', { type: 'Family'            , items: PersonalInfo.Family });
+                        this.$store.commit('setHeaderMain', { type: 'Otchestvo'         , items: PersonalInfo.Otchestvo });
+
+                        this.$store.commit('setHeaderMain', { type: 'CBUSD'             , items: USD.CBCource });
+                        this.$store.commit('setHeaderMain', { type: 'sellUSD'           , items: USD.CourseSell });
+                        this.$store.commit('setHeaderMain', { type: 'buyUSD'            , items: USD.CourseBuy });
+
+                        this.$store.commit('setHeaderMain', { type: 'CBGBP'             , items: GBP.CBCource });
+                        this.$store.commit('setHeaderMain', { type: 'sellGBP'           , items: GBP.CourseSell });
+                        this.$store.commit('setHeaderMain', { type: 'buyGBP'            , items: GBP.CourseBuy });
+
+                        this.$store.commit('setHeaderMain', { type: 'CBEUR'             , items: EUR.CBCource });
+                        this.$store.commit('setHeaderMain', { type: 'sellEUR'           , items: EUR.CourseSell });
+                        this.$store.commit('setHeaderMain', { type: 'buyEUR'            , items: EUR.CourseBuy });
+
+
+
+                        <template>
+    <div class="account__template">
+        <div class="account__heading">Счета</div>
+        <div class="account__block">
+            <div class="account__module" v-for="(item, index) of CardAccounts[0].Row">
+                <div class="account__segment m--first">
+                    <div class="account__currency" v-bind:style="'background-image:url(/public/i/png/'+ item.$.Currency +'.png);'"></div>
+                    <div class="account__content">
+                        <span class="account__name">{{ item.$.TypeAccount }}</span>
+                        <span class="account__number">{{ item.$.Account }}</span>
+                    </div>
+                </div>
+                <div class="account__segment m--last">
+                    <div class="account__residue">{{ item.$.Rest }}</div>
+                    <div class="account__button">
+                        <button class="account__button-open"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        data () {
+            return {
+                CardAccounts : this.CardAccounts
+            };
+        },
+        mounted() {
+            this.CardAccounts = this.$store.getters.CardAccounts;
+
+            this.$store.watch(() => this.$store.getters.CardAccounts, res => {
+                this.CardAccounts = res;
+            }, {
+                immediate: true
+            })
+        }
+
+    };
+</script>
+
+,
+        created: function () {
+            EventBus.$on('header-main-get', clickCount => {
+                (clickCount) ? this.updateDataLogon() : console.log('error-header-main');
+            });
+        },
+
+// (() => console.log(this))();  // Анонимная стрелочная функция
+
+/*
+``
+*/ 
+
+
+        <div class="header__block m--home">
+            <v-touch id="hamburger" class="header__image-hamburger" v-on:tap="clickOpenMainMenu('tap')" style="background-image: url('/public/i/svg/menu1.svg');" v-on:swiperight="clickOpenMainMenu('swipe')"></v-touch>
+
+            <div class="header__heading-block">
+                <img class="header__image" src="/public/i/png/logo_android.png" alt="Логотип Компании" v-if="!namePageStatus">
+                <span v-else="namePageStatus">{{ namePage }}</span>
+            </div>
+
+            <v-touch id="person" class="header__image-person" v-on:tap="clickOpenPersonMenu('tap')" style="background-image: url('/public/i/svg/person3.svg');" v-on:swipeleft="clickOpenPersonMenu('swipe')"></v-touch>
+        </div>

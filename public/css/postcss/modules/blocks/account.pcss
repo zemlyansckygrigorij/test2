@@ -1,0 +1,33 @@
+/**
+ * Раздел/блок счетов
+ */
+
+.account {	
+	@mixin cards;
+	@mixin cards-heading;
+	@mixin cards-menu;
+	@mixin common-content;
+
+	&__heading {
+		@mixin common-heading;
+	}
+
+		/* Боковое меню */
+	&__menu {
+		@mixin menu-right;
+	}
+
+    &__block-balance {
+        @mixin cards-block;
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,248 @@
+.form {
+	@define-mixin label-icon {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		padding: 0px 20px;
+		border-right: 1px solid $green; 
+		background-repeat: no-repeat;
+		background-size: 16px;
+		background-position: 12px 7px;
+	}
+
+	@define-mixin form-shadow {
+		box-shadow: 0px 2px rgba(0,0,0,0.6);
+	}
+
+	@mixin display-flex column, nowrap, center, center;
+	width: 100%;
+
+	&.m--top {
+		margin-top: 10px;
+	}
+
+	&__segment {
+		width: 100%;
+	}
+
+	&__block {
+		position: relative;
+		width: 100%;
+		margin-bottom: $menu-top-content;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+
+		&.m--input {
+			min-width: 280px;
+			max-width: 360px;
+
+			&:before {
+				@mixin label-icon;
+			}
+		}
+
+		&.m--login {
+			&:before {
+				background-image: url('/public/i/addImage/data-copy-2.png');
+			}
+		}
+
+		&.m--password {
+			&:before {
+				background-image: url('/public/i/addImage/account-copy-2.png');
+			}
+		}
+
+		&.m--code {
+			&:before {
+				@mixin display-flex row, nowrap, center, center;
+				content: attr(data-key);
+				padding: 0px 16px;
+				font-size: 18px;
+			}
+		}
+
+		&.m--two-button {
+			display: flex;
+		}
+
+		&.m--padding {
+			padding: 0px 20px;
+		}
+
+		&.m--button-inside {
+			@mixin form-button;
+		}
+	}
+
+	&__block-double {
+		margin-bottom: $menu-top-content;
+		border-bottom: $border-green;
+	    background: $background-base;
+	    color: $gray;
+
+	    &.m--no-margin {
+	    	margin-bottom: 0;
+	    }
+
+		&-item {
+			@mixin display-flex row, nowrap, space-between;
+			position: relative;
+			width: 100%;
+			padding: $base-padding;
+			border-bottom: $border-green;
+
+		    &.m--column-margin {
+		    	@mixin display-flex column, nowrap, space-between;
+		    }
+		}
+
+	    &-init {
+	    	position: relative;
+
+		    &.m--right {
+		    	@mixin display-flex row, nowrap, flex-end;
+		    }
+	    }
+	}
+
+	&__input,
+	&__textarea,
+	&__button,
+	&__select {
+		width: 100%;
+	}
+
+	&__input {
+		border: 1px solid $green;
+
+		&-reset {
+			@mixin reset-button;
+			color: initial;
+		}
+	}
+
+	&__input,
+	&__button {
+		height: 35px;
+	}
+
+	&__textarea {
+		padding-left: $form-textarea-indent;
+		background: $background-base;
+
+		&.m--border {
+			border: $border-green;
+		}
+	}
+
+	&__input {
+		padding-left: $form-input-indent;
+		background: $background-base;
+
+		&.m--code {
+			padding-left: 100px;
+		}
+	}
+
+	&__select {
+		@mixin reset-button;
+	}
+
+	&__label-placeholder {
+		&:before {
+			@mixin display-flex row, nowrap, center, center;
+			content: attr(data-placeholder);
+			position: absolute;
+			top: 0px;
+			left: $form-input-indent;
+			height: 100%;
+			font-size: 12px;
+			color: $lightGray;
+			transition: $transition-4;
+			opacity: 1;
+			cursor: none;
+		}
+	}
+
+	&__label-placeholder.m--textarea {
+		&:before {
+			top: 4px;
+			left: $form-textarea-indent;
+			height: auto;
+		}
+	}
+
+	&__label-placeholder.m--left {
+		&:before {
+			left: 0;
+		}
+	}
+
+	&__label-placeholder.m--right {
+		&:before {
+			left: auto;
+			right: 0;
+		}
+	}
+
+	&__label-placeholder.m--bold {
+		&:before {
+			@mixin text-item-bold;
+		}
+	}
+
+	&__label-placeholder.is-close {
+		&:before {
+			opacity: 0;
+		}
+	}
+
+	&__input:focus + &__label-placeholder {
+		opacity: 0;
+	}
+
+	&__label-placeholder.m--code {
+		&:before {
+			left: 100px;
+		}
+	}
+
+	&__button {
+		@mixin display-flex row, nowrap, center, center;
+		border-radius: 5px;
+		text-transform: uppercase;
+		background: rgba($white, 0.37);
+		color: $green;
+
+		&.is-active {
+			background: rgba($white, 0.87);
+		}
+
+		&.m--left-button {
+			border-radius: 5px 0px 0px 5px;
+			border-right: 1px solid $green;
+		}
+
+		&.m--right-button {
+			border-radius: 0px 5px 5px 0px;
+		}
+
+		&.m--shadow {
+			box-shadow: 0px 2px rgba(0,0,0,0.6);
+		}
+	}
+
+	&__text-input {
+		padding: 5px;
+		border: 1px solid $green;
+		font-size: 16px;
+		text-align: left;
+		color: $black;
+		background: $background-base;
+	}
+}

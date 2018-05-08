@@ -1,0 +1,61 @@
+/**
+ * Блок с мобильными платежами на странице Платежи
+ */
+
+.mobile-payment {
+	@mixin payment-init;
+
+	&__block {
+		@mixin display-flex row, wrap, center;
+	    width: 320px;
+	    margin: auto;
+	}
+
+	&__init {
+		width: 70px;
+		height: 70px;
+		margin: 0px 40px 20px 0px;
+		border: $border-green;
+		border-radius: 50px;
+
+		&.m--beeline {
+			background: $background-base url('/public/i/png/mobile_beeline_ico.png') no-repeat; 
+			background-size: 60px 43px; 
+			background-position: 6px 6px;
+		}
+
+		&.m--megafon {
+			background: $background-base url('/public/i/png/mobile_megafon_ico.png') no-repeat; 
+			background-size: 60px 43px; 
+			background-position: 4px 6px;
+		}
+
+		&.m--mts {
+			background: $background-base url('/public/i/png/mobile_mts_ico.png') no-repeat; 
+			background-size: 40px 53px; 
+			background-position: 13px 6px;
+		}
+
+		&.m--tele2 {
+			background: $background-base url('/public/i/png/mobile_tele2_ico.png') no-repeat; 
+			background-size: 60px 22px; 
+			background-position: 4px 20px;
+		}
+
+		&.m--rtc {
+			background: $background-base url('/public/i/png/mobile_rtc_ico.png') no-repeat; 
+			background-size: 56px 48px; 
+			background-position: 6px 4px;
+		}
+
+		&.m--other {
+			background: $background-base url('/public/i/png/mobile_other_ico.png') no-repeat; 
+			background-size: 44px 44px; 
+			background-position: 12px 10px;
+		}
+
+		&:nth-child(3n) {
+			margin-right: 0px;
+		}
+	}
+}

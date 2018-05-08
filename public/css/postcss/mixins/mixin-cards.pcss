@@ -1,0 +1,99 @@
+/**
+ * Миксины, используемые в интерфейсах account, cards
+ */
+
+@define-mixin cards {
+    @mixin common-arrow-open;
+
+	&__block {
+		background: $background-base;
+	}
+
+	&__module {
+		@mixin display-flex row, nowrap, space-between;
+		height: 55px;
+		padding: 10px 5% 10px 20px; 
+		border-bottom: $border-green;
+	}
+
+	&__segment {
+		&.m--first {
+			@mixin display-flex row, nowrap, flex-start;
+		}
+
+		&.m--last {
+			@mixin display-flex row, nowrap, flex-end;
+		}
+	}
+
+	&__currency {
+	    width: 40px;
+	    height: 100%;
+	    margin-right: 15px;
+	    background-size: 40px 40px;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+
+	&__information {
+		@mixin display-flex column, nowrap;
+	}
+
+	&__residue {
+		@mixin display-flex column, nowrap, flex-end;
+	}
+
+	&__name {
+		@mixin text-item-light;
+	} 
+
+	&__number {
+		@mixin text-item-bold;
+	}
+}
+
+
+/**
+ * Миксин с heading для карт (заголовок, кнопка закрытия и кнопка поиска)
+ */
+@define-mixin cards-heading {
+	@mixin menu-heading-base;
+
+	&__button-search {
+		@mixin menu-image;
+
+        position: absolute;
+        top: 0px;
+        right: $left-right-arrow;
+    	height: 100%;
+	    background: url(/public/i/svg/search2.svg) no-repeat;
+	    background-size: 30px 30px;
+		background-position-x: -5px;
+	    background-position-y: center;
+	}
+}
+
+@define-mixin cards-menu {
+	&__undefined-pay {
+		margin-top: $menu-top-content;
+		padding: 20px 15px;
+		border-bottom: $border-green;
+		background: $background-base;
+		color: $gray;
+	}
+
+    &__block-text {
+        color: $gray;
+		
+		&.m--bold {
+			font-weight: 700;
+		}
+    }
+}
+
+@define-mixin cards-block {
+    @mixin menu-block;
+	@mixin display-flex row, nowrap, space-between;
+    padding: 1em 20px;
+	border-bottom: $border-green;
+}

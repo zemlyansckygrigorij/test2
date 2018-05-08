@@ -1,0 +1,95 @@
+/**
+ * Миксины для бокового меню
+ */
+
+/**
+ * Инициализация бокового меню
+ */
+@define-mixin menu-right {
+    @mixin common-background;
+    @mixin common-menu;
+    @mixin display-flex column, nowrap, flex-start;
+    right: -100%;
+    opacity: 0;
+    transition: $transition-base;
+    overflow: hidden;
+
+    &.is-active {
+        right: 0%;
+        opacity: 1;
+    }
+}
+
+/**
+ * Базовая инициализация заголовка
+ */
+@define-mixin menu-heading {
+    @mixin display-flex row, nowrap, center, center;
+    position: relative;
+    height: $height-header;
+    background: white;
+}
+
+/**
+ * Базовая инициализация блока с меню
+ */
+@define-mixin menu-block {
+    overflow-y: scroll;
+    background: $background-base;
+}
+
+/**
+ * Базовая инициализация изображения для кнопки
+ */
+@define-mixin menu-image {
+    @mixin reset-button;
+    content: '';
+    width: 30px;
+    font-size: 16px;
+}
+
+/**
+ * Базовая инициализация изображения стрелки
+ */
+@define-mixin menu-arrow {
+    @mixin menu-image;
+    @mixin common-arrow;
+}
+
+/**
+ * Базовая инициализация изображения стрелки для закрытия меню
+ */
+@define-mixin menu-button-close {
+    &__button-close {
+        @mixin menu-arrow;
+        position: absolute;
+        top: 0px;
+        left: $left-right-arrow;
+    }
+}
+
+/**
+ * Миксин с базовым heading (заголовок и кнопка закрытия)
+ */
+@define-mixin menu-heading-base {
+    @mixin menu-button-close;
+
+    &__heading-menu {
+        @mixin menu-heading;
+    }
+}
+
+/**
+ * Миксин для инициализации псевдоэлемента в главных боковых меню
+ */
+@define-mixin menu-before-icon-menu {
+    content: '';
+    position: relative;
+    top: -5px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background: url('/public/i/png/menu-icons.png');
+    background-size: 270px 30px;
+    background-repeat: no-repeat;
+}
