@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "async": "latest",
+    
     "basic-auth-connect": "latest",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.13.2",

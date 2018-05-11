@@ -11,7 +11,7 @@ import accounts from './modules/accounts';
 import cards from './modules/cards';
 import virtual from './modules/virtual';
 import regular from './modules/regular';
-
+import banner from './modules/banner';
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
@@ -23,7 +23,8 @@ const store = new Vuex.Store({
         accounts,
         cards,
         virtual,
-        regular
+        regular,
+        banner 
     },
 		// Непосредственное хранилище данных
 	state: {

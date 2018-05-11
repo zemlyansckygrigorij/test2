@@ -62,6 +62,10 @@
 
         <v-dialog :width="280" :adaptive="true"/>
 
+        
+        <div id="bannerLoginId">
+            <bannerLogin></bannerLogin>
+        </div>
 	</div>
 </template>
 

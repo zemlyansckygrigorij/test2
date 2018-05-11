@@ -18,6 +18,14 @@
 	                    <button id="buttonMessage" type="submit" class="form__button m--shadow">отправить</button>
 	                </div>
 				</form>
+
+
+                <div  id="bannerMessageBankId" >
+					<bannerMessageBank></bannerMessageBank>
+		  	  	</div>
+
+
+
 		  	</div>
 	  	</div>
 	</div>
@@ -38,6 +46,8 @@
 	import placeholderChange from '../../common/placeholderChange';
 	import initHeightBlock from '../../common/initHeightBlock.js';
 
+    import bannerMessageBank from '../component/bannerMessageBank.vue';
+
 	export default {
 		mixins: [mixinСardHeader, mixinNameHeader],
 		props: ['namePage'],
@@ -46,6 +56,7 @@
 		},
 		components: { 
 			HeaderComponent,
+			bannerMessageBank
 		},
 		methods: {
 	        updateDataQuestion () {

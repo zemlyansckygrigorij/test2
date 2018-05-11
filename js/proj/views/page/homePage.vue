@@ -19,7 +19,7 @@
 		  	  	</div>
 
 
-		  	  	<div id="bannerMain" v-show="loadingBannerMain">
+		  	  	<div  id="bannerMainId" >
 					<bannerMain></bannerMain>
 		  	  	</div>
 		  	 
@@ -45,7 +45,7 @@
 			return {
 				status: this.status,
 				loadingCircle: this.loadingCircle,
-				loadingBannerMain: this.loadingBannerMain
+				//loadingBannerMain: this.loadingBannerMain
 
 			}
 		},
@@ -72,19 +72,7 @@
 			  	}
 			});
 
-/*	EventBus.$on('test', inf => {
-			  	if(inf) {
-			  	    setTimeout(() => {
-                  this.loadingCircle = true;
-      }, 16000);
-			  	    
-			  	} else {
-			  	    console.log('error-header-main');	
-			  	}
-			});
-
-	*/
-	     this.loadingBannerMain = true;//test
+	     //this.loadingBannerMain = true;//test
 
 		},
 		methods: {
@@ -130,10 +118,6 @@
         	initHeightBlock(homePage);
         	this.status = true;
             this.loadingCircle = false;
-
-        /*EventBus.$on('test-events', inf => {
-            console.log(123456);
-        });*/
 
             setTimeout(() => {
                   this.loadingCircle = false;

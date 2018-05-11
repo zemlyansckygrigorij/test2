@@ -61,6 +61,9 @@
 				</div>
 	  		</div>
 	  	</div>
+	  	<div  id="bannerCardsId">
+		    <bannerCards></bannerCards>
+		</div>
 	</div>
 </template>
 
@@ -77,6 +80,8 @@
 	import mixinBackground from '../../mixins/mixin-background';
 	import mixinСardHeader from '../../mixins/mixin-card-header.js';
 	import mixinNameHeader from '../../mixins/mixin-name-header.js';
+
+    import bannerCards from '../component/bannerCards.vue';
 
 	export default {
 		mixins: [mixinBackground, mixinСardHeader, mixinNameHeader],
@@ -96,7 +101,8 @@
 		},
 		components: { 
 			HeaderComponent,
-			VirtualCards
+			VirtualCards,
+			bannerCards
 		},
 		methods: {
 	        clickUnderOpen (e) {

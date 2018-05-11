@@ -54,37 +54,43 @@ const state = {
                             ]
                         },
 
-
+/*
 
     bannerHomePage:     {
                             title: 'Заголовок!',
-                            text: 'Здесь должен быть текст',
+                            text: 'Здесь должен быть текст: элемент bannerHomePage',
+                            state: true
                         },
 
     bannerLogin:        {
                             title: 'Заголовок!',
-                            text: 'Здесь должен быть текст',
+                            text: 'Здесь должен быть текст: элемент bannerLogin',
+                            state: true
                         },
     bannerSettings:     {
                             title: 'Заголовок!',
-                            text: 'Здесь должен быть текст',
+                            text: 'Здесь должен быть текст: элемент bannerSetting',
+                            state: true
                         },
 
 
     bannerMessageBank :     {
                             title: 'Заголовок!',
-                            text: 'Здесь должен быть текст',
+                            text: 'Здесь должен быть текст: элемент bannerMessageBank ',
+                            state: true
                         },
 
     bannerCards:        {
                             title: 'Заголовок!',
-                            text: 'Здесь должен быть текст',
+                            text: 'Здесь должен быть текст: элемент bannerCards',
+                            state: true
                         },
     bannerPayments:     {
                             title: 'Заголовок!',
-                            text: 'Здесь должен быть текст',
+                            text: 'Здесь должен быть текст: элемент bannerPayments',
+                            state: true
                         },
-
+*/
 
 };
 
@@ -95,13 +101,14 @@ const getters = {
     desktopCloseAPP: (state, getters) => state.desktopCloseAPP,
     internetCloseAPP: (state, getters) => state.internetCloseAPP,
     requestError: (state, getters) => state.requestError,
-
+/*
     bannerHomePage: (state, getters) => state.bannerHomePage,
     bannerLogin: (state, getters) => state.bannerLogin,
     bannerSettings: (state, getters) => state.bannerSettings,
     bannerMessageBank: (state, getters) => state.bannerMessageBank,
     bannerCards: (state, getters) => state.bannerCards,
     bannerPayments: (state, getters) => state.bannerPayments,
+    */
 };
 
 export default {

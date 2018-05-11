@@ -77,6 +77,11 @@
 				</div>
 		  	</div>
 	  	</div>
+
+	  	<div  id="bannerPaymentsId" >
+		    <bannerPayments></bannerPayments>
+		</div>
+
 	</div>
 </template>
 
@@ -98,6 +103,7 @@
 
 	import initHeightBlock from '../../common/initHeightBlock.js';
 
+    import bannerPayments from '../component/bannerPayments.vue';
 	export default {
 		mixins: [mixinCloseMenu, mixinNameHeader],
 		props: ['namePage'],
@@ -113,7 +119,8 @@
 			StatePayments,
 			BetweenAccounts,
 			TransferBankClient,
-			RandomPayment
+			RandomPayment,
+			bannerPayments
 		},
 		methods: {
 	        updateDataQuestion () {

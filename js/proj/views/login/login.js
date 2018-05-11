@@ -2,7 +2,7 @@
 import HeaderComponent from '../layout/header-login.vue';
 import SliderNews from '../component/slider-news.vue';
 import NavNews from '../component/nav-news.vue';
-
+import bannerLogin from '../component/bannerLogin.vue';
     // Подключение модулей
 import axios from 'axios';
 import VModal from 'vue-js-modal';
@@ -181,6 +181,7 @@ export default {
         HeaderComponent,
         SliderNews,
         NavNews,
-        VModal
+        VModal,
+        bannerLogin
     }
 };

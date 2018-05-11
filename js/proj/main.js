@@ -27,6 +27,7 @@ import messageBank from './views/page/message-bank.vue';
 import cards from './views/page/cards.vue';
 import payments from './views/page/payments.vue';
 
+
 let optionsStorage = {
     namespace: 'vuejs__', 
     name: 'ls', 
@@ -60,7 +61,7 @@ var router = new VueRouter({
             { name: 'login'        , path: '/login'         , component: login     },
             { name: 'payments'     , path: '/payments'      , component: payments    , props: { namePage: "Платежи" }},
             { name: 'cards'        , path: '/cards'         , component: cards       , props: { namePage: "Карты" }},
-            { name: 'settings'     , path: '/settings'      , component: settings    , props: { namePage: "Настройки" }  },
+            { name: 'settings'     , path: '/settings'      , component: settings    , props: { name: "settings", namePage: "Настройки" }  },
             { name: 'message-bank' , path: '/message-bank'  , component: messageBank , props: { namePage: "Сообщение в банк" }  },
             { name: 'all'          , path: '*'              , redirect: '/login'   }
         ]

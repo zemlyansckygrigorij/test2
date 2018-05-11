@@ -36,6 +36,10 @@
 				</div>
 			</div>
 	  	</div>
+
+	  	<div id="bannerSettingsId" >
+		    <bannerSettings></bannerSettings>
+		</div>
 	</div>
 </template>
 
@@ -48,12 +52,15 @@
 
 	import mixinNameHeader from '../../mixins/mixin-name-header.js';
 	import mixinSwipeBase from '../../mixins/mixin-swipe-base.js';
+	import mixinBanner from '../../mixins/mixin-banner.js';
 
 	import initHeightBlock from '../../common/initHeightBlock.js';
 
+	import bannerSettings from '../component/bannerSettings.vue';
+
 	export default {
-		mixins: [mixinNameHeader, mixinSwipeBase],
-		props: ['namePage'],
+		mixins: [mixinNameHeader, mixinSwipeBase, mixinBanner],
+		props: ['namePage', 'name'],
 		data () {
 			return {
 				activeDark: this.activeDark,
@@ -62,6 +69,7 @@
 		},
 		components: { 
 			HeaderComponent,
+			bannerSettings
 		},
 		methods: {
 			changeBackground (typeBackground) {
